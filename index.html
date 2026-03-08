@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portofolio pribadi Ahmad Faozan Zebua - Web Developer dari Medan, Sumatera Utara." />
+  <title>Ahmad Faozan Zebua | Portofolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== PARTICLES BACKGROUND ===== -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>AFZ<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-greeting">
+          <span class="wave">👋</span>
+          <span>Halo, Saya</span>
+        </div>
+        <h1 class="hero-name">Ahmad Faozan<br><span class="name-highlight">Zebua</span></h1>
+        <div class="hero-role">
+          <span class="role-prefix">Seorang </span>
+          <span class="typed-text" id="typed-text"></span>
+          <span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-desc">
+          Passionate developer yang berfokus pada menciptakan pengalaman digital yang indah, fungsional, dan berkesan. Berbasis di Medan, Sumatera Utara.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-code"></i> Lihat Projek
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-paper-plane"></i> Hubungi Saya
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="mailto:akunword0@gmail.com" class="social-icon" title="Email" target="_blank" rel="noopener">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/6283182744122" class="social-icon" title="WhatsApp" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://github.com/" class="social-icon" title="GitHub" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="avatar-ring">
+          <div class="avatar-wrapper">
+            <img src="profile.png" alt="Ahmad Faozan Zebua" class="avatar-img" id="avatar-img" onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex'">
+            <div class="avatar-fallback" id="avatar-fallback">
+              <i class="fas fa-user"></i>
+            </div>
+          </div>
+        </div>
+        <div class="float-badge badge-1">
+          <i class="fas fa-code"></i>
+          <span>Web Dev</span>
+        </div>
+        <div class="float-badge badge-2">
+          <i class="fas fa-palette"></i>
+          <span>UI Design</span>
+        </div>
+        <div class="float-badge badge-3">
+          <i class="fas fa-database"></i>
+          <span>Backend</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Tentang Saya</span>
+        <h2 class="section-title">Siapa <span class="highlight">Saya?</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card" data-aos="fade-right">
+          <div class="about-icon-wrap">
+            <i class="fas fa-user-astronaut"></i>
+          </div>
+          <h3>Siapa Saya</h3>
+          <p>Saya adalah seorang web developer yang antusias dalam membangun aplikasi web modern. Saya menikmati setiap proses dari desain hingga deployment.</p>
+        </div>
+        <div class="about-card" data-aos="fade-up">
+          <div class="about-icon-wrap">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Lokasi</h3>
+          <p>Berbasis di <strong>Medan Helvetia, Sumatera Utara</strong>, Indonesia. Terbuka untuk peluang remote maupun lokal.</p>
+        </div>
+        <div class="about-card" data-aos="fade-left">
+          <div class="about-icon-wrap">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Tujuan</h3>
+          <p>Membangun solusi digital yang tidak hanya fungsional, tetapi juga memberikan pengalaman pengguna yang luar biasa dan berdampak nyata.</p>
+        </div>
+      </div>
+      <div class="about-info" data-aos="fade-up">
+        <div class="info-row">
+          <div class="info-item">
+            <span class="info-label"><i class="fas fa-user"></i> Nama</span>
+            <span class="info-value">Ahmad Faozan Zebua</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label"><i class="fas fa-phone"></i> Telepon</span>
+            <span class="info-value">083182744122</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label"><i class="fas fa-envelope"></i> Email</span>
+            <span class="info-value">akunword0@gmail.com</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label"><i class="fas fa-map-pin"></i> Alamat</span>
+            <span class="info-value">Medan Helvetia, Sumatera Utara</span>
+          </div>
+        </div>
+        <a href="mailto:akunword0@gmail.com" class="btn btn-primary" style="margin-top: 1.5rem;">
+          <i class="fas fa-download"></i> Hubungi Sekarang
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Kemampuan</span>
+        <h2 class="section-title">Tech <span class="highlight">Stack</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card" data-aos="zoom-in">
+          <div class="skill-icon" style="background: linear-gradient(135deg, #e44d26, #f16529);">
+            <i class="fab fa-html5"></i>
+          </div>
+          <h4>HTML5</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          <span class="skill-percent">90%</span>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-delay="100">
+          <div class="skill-icon" style="background: linear-gradient(135deg, #264de4, #1b73e8);">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <h4>CSS3</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          <span class="skill-percent">85%</span>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-delay="200">
+          <div class="skill-icon" style="background: linear-gradient(135deg, #f7df1e, #e6c914);">
+            <i class="fab fa-js"></i>
+          </div>
+          <h4>JavaScript</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          <span class="skill-percent">80%</span>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-delay="300">
+          <div class="skill-icon" style="background: linear-gradient(135deg, #4F5B93, #8892BF);">
+            <i class="fab fa-php"></i>
+          </div>
+          <h4>PHP</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          <span class="skill-percent">75%</span>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-delay="100">
+          <div class="skill-icon" style="background: linear-gradient(135deg, #FF2D20, #c0392b);">
+            <i class="fab fa-laravel"></i>
+          </div>
+          <h4>Laravel</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+          <span class="skill-percent">72%</span>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-delay="200">
+          <div class="skill-icon" style="background: linear-gradient(135deg, #00758F, #0098ba);">
+            <i class="fas fa-database"></i>
+          </div>
+          <h4>MySQL</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+          <span class="skill-percent">78%</span>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-delay="300">
+          <div class="skill-icon" style="background: linear-gradient(135deg, #61DBFB, #21a1c4);">
+            <i class="fab fa-react"></i>
+          </div>
+          <h4>React</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+          <span class="skill-percent">65%</span>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-delay="100">
+          <div class="skill-icon" style="background: linear-gradient(135deg, #F05032, #d43a1b);">
+            <i class="fab fa-git-alt"></i>
+          </div>
+          <h4>Git</h4>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+          <span class="skill-percent">70%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Karya</span>
+        <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Featured Project -->
+      <div class="featured-project" data-aos="fade-up">
+        <div class="featured-badge">
+          <i class="fas fa-star"></i> Featured Project
+        </div>
+        <div class="featured-header">
+          <div class="featured-info">
+            <h3 class="featured-title">MixShoes E-Commerce</h3>
+            <p class="featured-desc">
+              Aplikasi e-commerce lengkap untuk penjualan sepatu dengan fitur manajemen produk, keranjang belanja, checkout, dan sistem pembayaran. Dibangun dengan teknologi modern dan desain yang responsif.
+            </p>
+            <div class="featured-tags">
+              <span class="tag">Laravel</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">PHP</span>
+              <span class="tag">E-Commerce</span>
+            </div>
+            <div class="featured-actions">
+              <a href="https://mixshoes-portofolio-production.up.railway.app" target="_blank" rel="noopener" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="iframe-wrapper">
+          <div class="iframe-header">
+            <div class="iframe-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="iframe-url">
+              <i class="fas fa-lock"></i>
+              <span>mixshoes-portofolio-production.up.railway.app</span>
+            </div>
+            <a href="https://mixshoes-portofolio-production.up.railway.app" target="_blank" rel="noopener" class="iframe-open" title="Buka di tab baru">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+          <div class="iframe-container">
+            <iframe 
+              id="project-iframe"
+              src="https://mixshoes-portofolio-production.up.railway.app" 
+              title="MixShoes E-Commerce Project"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+            <div class="iframe-overlay" id="iframe-overlay">
+              <button class="load-iframe-btn" id="load-iframe-btn">
+                <i class="fas fa-play-circle"></i>
+                <span>Klik untuk Memuat Preview</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Kontak</span>
+        <h2 class="section-title">Hubungi <span class="highlight">Saya</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">Punya projek menarik atau ingin berdiskusi? Jangan ragu untuk menghubungi saya!</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-cards">
+          <a href="tel:083182744122" class="contact-card" data-aos="fade-right">
+            <div class="contact-card-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-card-body">
+              <h4>Telepon</h4>
+              <p>083182744122</p>
+            </div>
+            <i class="fas fa-arrow-right contact-card-arrow"></i>
+          </a>
+          <a href="mailto:akunword0@gmail.com" class="contact-card" data-aos="fade-right" data-delay="100">
+            <div class="contact-card-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-card-body">
+              <h4>Email</h4>
+              <p>akunword0@gmail.com</p>
+            </div>
+            <i class="fas fa-arrow-right contact-card-arrow"></i>
+          </a>
+          <a href="https://wa.me/6283182744122" target="_blank" rel="noopener" class="contact-card" data-aos="fade-right" data-delay="200">
+            <div class="contact-card-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="contact-card-body">
+              <h4>WhatsApp</h4>
+              <p>083182744122</p>
+            </div>
+            <i class="fas fa-arrow-right contact-card-arrow"></i>
+          </a>
+          <div class="contact-card static" data-aos="fade-right" data-delay="300">
+            <div class="contact-card-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-card-body">
+              <h4>Alamat</h4>
+              <p>Medan Helvetia, Sumatera Utara</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" data-aos="fade-left">
+          <div class="form-group">
+            <label for="name">Nama Lengkap</label>
+            <div class="input-wrapper">
+              <i class="fas fa-user"></i>
+              <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-wrapper">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="email" name="email" placeholder="email@contoh.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subjek</label>
+            <div class="input-wrapper">
+              <i class="fas fa-tag"></i>
+              <input type="text" id="subject" name="subject" placeholder="Subjek pesan" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <div class="input-wrapper textarea-wrapper">
+              <i class="fas fa-comment"></i>
+              <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            <i class="fas fa-paper-plane"></i>
+            <span>Kirim Pesan</span>
+          </button>
+          <div class="form-success" id="form-success">
+            <i class="fas fa-check-circle"></i>
+            <span>Pesan berhasil dikirim! Terima kasih telah menghubungi saya.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>AFZ<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-text">Dibuat dengan <span class="heart">❤️</span> oleh <strong>Ahmad Faozan Zebua</strong></p>
+        <p class="footer-copy">&copy; <span id="year"></span> Ahmad Faozan Zebua. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
