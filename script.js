@@ -235,7 +235,7 @@ const contactForm = document.getElementById('contact-form');
 const submitBtn = document.getElementById('submit-btn');
 const formSuccess = document.getElementById('form-success');
 
-contactForm.addEventListener('submit', function(e) {
+contactForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
   // Simple validation
@@ -245,29 +245,43 @@ contactForm.addEventListener('submit', function(e) {
     if (!input.value.trim()) {
       input.style.borderColor = '#ff5f57';
       valid = false;
-      setTimeout(() => {
-        input.style.borderColor = '';
-      }, 2000);
+      setTimeout(() => { input.style.borderColor = ''; }, 2000);
     }
   });
 
   if (!valid) return;
 
-  // Simulate sending
+  // Show loading state
   submitBtn.disabled = true;
   submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Mengirim...</span>';
 
-  setTimeout(() => {
-    submitBtn.innerHTML = '<i class="fas fa-check"></i> <span>Terkirim!</span>';
-    formSuccess.classList.add('show');
-    contactForm.reset();
+  const templateParams = {
+    from_name: document.getElementById('name').value,
+    from_email: document.getElementById('email').value,
+    subject: document.getElementById('subject').value,
+    message: document.getElementById('message').value,
+  };
 
-    setTimeout(() => {
+  emailjs.send('service_63drkdn', 'template_l46ussl', templateParams)
+    .then(() => {
+      submitBtn.innerHTML = '<i class="fas fa-check"></i> <span>Terkirim!</span>';
+      formSuccess.classList.add('show');
+      contactForm.reset();
+
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> <span>Kirim Pesan</span>';
+        formSuccess.classList.remove('show');
+      }, 4000);
+    })
+    .catch((error) => {
+      console.error('EmailJS error:', error);
       submitBtn.disabled = false;
-      submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> <span>Kirim Pesan</span>';
-      formSuccess.classList.remove('show');
-    }, 4000);
-  }, 1800);
+      submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> <span>Gagal Mengirim</span>';
+      setTimeout(() => {
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> <span>Kirim Pesan</span>';
+      }, 3000);
+    });
 });
 
 // ===== IFRAME LOAD BUTTON =====
